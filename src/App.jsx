@@ -10,7 +10,7 @@ function App() {
       exact: true,
       element: (
         <>
-          <section className="main">
+          <section className="main ">
             <Header />
           </section>
         </>
