@@ -41,7 +41,7 @@ const Header = () => {
           <RiMenu2Fill className="text-[18px] text-[#545454]" />
         </Button>
       </div>
-      <div className="part2 w-[40%] flex items-center justify-end gap-5">
+      <div className="part2 w-[40%] flex items-center justify-end gap-6">
         <Button className="!w-[40px] !h-[40px] !rounded-full !min-w-[40px] !text-[#000]">
           <StyledBadge badgeContent={4} color="secondary">
             <IoMdNotifications className="text-[18px] text-[#545454]" />
