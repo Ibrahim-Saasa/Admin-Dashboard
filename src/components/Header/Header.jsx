@@ -35,7 +35,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full h-[auto] py-2 pl-52 pr-7 bg-[#9ec49e] border-b-2  border-[#000]  flex items-center justify-between">
+    <header className="w-full h-[auto] py-2 pl-62 pr-7 shadow-md bg-[#9ec49e] flex items-center justify-between">
       <div className="part1">
         <Button className="!w-[40px] !h-[40px] !rounded-full !min-w-[40px] !text-[#000]">
           <RiMenu2Fill className="text-[18px] text-[#545454]" />

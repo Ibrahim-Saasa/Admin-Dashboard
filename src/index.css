@@ -3,3 +3,9 @@
 .MuiBadge-badge {
   background-color: green !important;
 }
+body {
+  background-color: #fff0f5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
