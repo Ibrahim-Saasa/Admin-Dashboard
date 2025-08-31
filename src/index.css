@@ -9,3 +9,6 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+.ReactCollpase--collapse {
+  transition: height 500ms ease-in-out;
+}
