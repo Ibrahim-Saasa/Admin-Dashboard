@@ -10,5 +10,15 @@ body {
   font-style: normal;
 }
 .ReactCollpase--collapse {
-  transition: height 500ms ease-in-out;
+  transition: height 500ms !important;
+}
+.btn-blue {
+  background: #9ec49e !important;
+  color: #000 !important;
+  padding: 8px 20px !important;
+  margin-top: 5px !important;
+}
+.btn-blue:hover {
+  background: #799c79 !important;
+  transition: all 0.5s !important;
 }
