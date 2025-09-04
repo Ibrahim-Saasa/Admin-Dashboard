@@ -159,7 +159,7 @@ const OrderManagement = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto border-1 border-[#9ec49e] rounded-md">
+    <div className="max-w-full mx-auto border-1 border-[#9ec49e] rounded-md">
       <div className="bg-[#fff0f5] rounded-lg shadow-lg p-6">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold text-gray-800">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import Button from "@mui/material/Button";
@@ -11,6 +11,7 @@ import { FaShoppingBag } from "react-icons/fa";
 import { IoLogOut } from "react-icons/io5";
 import { FaAngleDown } from "react-icons/fa";
 import { Collapse } from "react-collapse";
+import { MyContext } from "../../App";
 
 const SideBar = () => {
   const [subMenuIndex, setSubMenuIndex] = useState(null);
@@ -22,9 +23,11 @@ const SideBar = () => {
     }
   };
 
+  const context = useContext(MyContext);
+
   return (
     <>
-      <div className="sidebar fixed top-0 left-0 bg-[#fff0f5] w-[16%] h-full border-r border-[#9ec49e] px-6">
+      <div className="sidebar fixed top-0 left-0 bg-[#fff0f5] h-full border-r border-[#9ec49e] px-6 z-[60]">
         <div className="w-full">
           <Link to="/">
             <img src={logo} className="w-[170px] " />
