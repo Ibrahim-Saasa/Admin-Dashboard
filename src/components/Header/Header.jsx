@@ -16,6 +16,7 @@ import { VscAccount } from "react-icons/vsc";
 import { TbLogout2 } from "react-icons/tb";
 import { CiSettings } from "react-icons/ci";
 import { MyContext } from "../../App";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -59,74 +60,92 @@ const Header = () => {
             <IoMdNotifications className="text-[18px] text-[#545454]" />
           </StyledBadge>
         </Button>
-        <div className="relative">
-          <div className="overflow-hidden cursor-pointer" onClick={handleClick}>
-            <FaUser className=" text-[18px] text-[#545454]" />
-          </div>
-          <Menu
-            anchorEl={anchorEl}
-            id="account-menu"
-            open={open}
-            onClose={handleClose}
-            onClick={handleClose}
-            slotProps={{
-              paper: {
-                elevation: 0,
-                sx: {
-                  overflow: "visible",
-                  filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-                  mt: 1.5,
-                  "& .MuiAvatar-root": {
-                    width: 32,
-                    height: 32,
-                    ml: -0.5,
-                    mr: 1,
-                  },
-                  "&::before": {
-                    content: '""',
-                    display: "block",
-                    position: "absolute",
-                    top: 0,
-                    right: 14,
-                    width: 10,
-                    height: 10,
-                    bgcolor: "background.paper",
-                    transform: "translateY(-50%) rotate(45deg)",
-                    zIndex: 0,
+        {context.isLogin === true ? (
+          <div className="relative">
+            <div
+              className="overflow-hidden cursor-pointer"
+              onClick={handleClick}
+            >
+              <FaUser className=" text-[18px] text-[#545454]" />
+            </div>
+
+            <Menu
+              anchorEl={anchorEl}
+              id="account-menu"
+              open={open}
+              onClose={handleClose}
+              onClick={handleClose}
+              slotProps={{
+                paper: {
+                  elevation: 0,
+                  sx: {
+                    overflow: "visible",
+                    filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                    mt: 1.5,
+                    "& .MuiAvatar-root": {
+                      width: 32,
+                      height: 32,
+                      ml: -0.5,
+                      mr: 1,
+                    },
+                    "&::before": {
+                      content: '""',
+                      display: "block",
+                      position: "absolute",
+                      top: 0,
+                      right: 14,
+                      width: 10,
+                      height: 10,
+                      bgcolor: "background.paper",
+                      transform: "translateY(-50%) rotate(45deg)",
+                      zIndex: 0,
+                    },
                   },
                 },
-              },
-            }}
-            transformOrigin={{ horizontal: "right", vertical: "top" }}
-            anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-          >
-            <MenuItem onClick={handleClose}>
-              <div className="flex items-center gap-3">
-                <div className="overflow-hidden cursor-pointer">
-                  <FaUser className=" text-[18px] text-[#545454]" />
+              }}
+              transformOrigin={{ horizontal: "right", vertical: "top" }}
+              anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+            >
+              <MenuItem onClick={handleClose}>
+                <div className="flex items-center gap-3">
+                  <div className="overflow-hidden cursor-pointer">
+                    <FaUser className=" text-[18px] text-[#545454]" />
+                  </div>
+                  <div className="info">
+                    <h3 className="text-[15px] font-[500] leading-5">
+                      Ibrahim Saasa
+                    </h3>
+                    <p className="text-[12px] font-[400] opacity-70">
+                      ibrahimsaasa@gmail.com
+                    </p>
+                  </div>
                 </div>
-                <div className="info">
-                  <h3 className="text-[15px] font-[500] leading-5">
-                    Ibrahim Saasa
-                  </h3>
-                  <p className="text-[12px] font-[400] opacity-70">
-                    ibrahimsaasa@gmail.com
-                  </p>
-                </div>
-              </div>
-            </MenuItem>
-            <Divider />
-            <MenuItem onClick={handleClose} className="flex items-center gap-3">
-              <CiSettings className="text-[25px]" />
-              <span className="text-[14px] ">Settings</span>
-            </MenuItem>
+              </MenuItem>
+              <Divider />
+              <MenuItem
+                onClick={handleClose}
+                className="flex items-center gap-3"
+              >
+                <CiSettings className="text-[25px]" />
+                <span className="text-[14px] ">Settings</span>
+              </MenuItem>
 
-            <MenuItem onClick={handleClose} className="flex items-center gap-3">
-              <TbLogout2 className="text-[20px]" />
-              <span className="text-[14px] ">Sign Out</span>
-            </MenuItem>
-          </Menu>
-        </div>
+              <MenuItem
+                onClick={handleClose}
+                className="flex items-center gap-3"
+              >
+                <TbLogout2 className="text-[20px]" />
+                <span className="text-[14px] ">Sign Out</span>
+              </MenuItem>
+            </Menu>
+          </div>
+        ) : (
+          <Link to="/login">
+            <Button className="!py-2 !px-5 !text-[#000] !bg-[#fff0f5] hover:bg-[#9ec49e] !rounded-full">
+              Sign in
+            </Button>
+          </Link>
+        )}
       </div>
     </header>
     // <header className="w-full h-auto py-2 pl-62 pr-7 shadow-md bg-[#9ec49e] flex items-center justify-between sticky top-0 z-50">

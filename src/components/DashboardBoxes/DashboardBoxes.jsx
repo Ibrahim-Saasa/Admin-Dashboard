@@ -23,43 +23,43 @@ const DashboardBoxes = () => {
         className="dashboardBoxesSlider "
       >
         <SwiperSlide>
-          <div className="box p-5 cursor-pointer hover:bg-[#f6f5f5] bg-[#fff0f5] rounded-md border-1 border-[#9ec49e] flex items-center gap-4 ">
-            <CiGift className="text-[30px] text-[#6897b7]" />
+          <div className="box p-5 cursor-pointer  bg-[#6897b7] rounded-md border-1 border-[#9ec49e] flex items-center gap-4 ">
+            <CiGift className="text-[30px] text-[#fff0f5]" />
             <div className="info w-[70%]">
               <h3>New Orders</h3>
               <b>1,378</b>
             </div>
-            <FaChartSimple className="text-[30px] text-[#6897b7]" />
+            <FaChartSimple className="text-[30px] text-[#fff0f5]" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="box p-5  cursor-pointer hover:bg-[#f6f5f5] bg-[#fff0f5] rounded-md border-1 border-[#9ec49e] flex items-center gap-4">
-            <MdOutlineSell className="text-[30px] text-[#80b660]" />
+          <div className="box p-5  cursor-pointer  bg-[#80b660] rounded-md border-1 border-[#9ec49e] flex items-center gap-4">
+            <MdOutlineSell className="text-[30px] text-[#fff0f5]" />
             <div className="info w-[70%]">
               <h3>Sales</h3>
               <b>$57,869</b>
             </div>
-            <MdAreaChart className="text-[30px] text-[#80b660]" />
+            <MdAreaChart className="text-[30px] text-[#fff0f5]" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="box p-5  cursor-pointer hover:bg-[#f6f5f5] bg-[#fff0f5] rounded-md border-1 border-[#9ec49e] flex items-center gap-4">
-            <RiBankLine className="text-[30px] text-[#af7353]" />
+          <div className="box p-5  cursor-pointer  bg-[#af7353] rounded-md border-1 border-[#9ec49e] flex items-center gap-4">
+            <RiBankLine className="text-[30px] text-[#fff0f5]" />
             <div className="info w-[70%]">
               <h3>Revenue</h3>
               <b>$10,950</b>
             </div>
-            <MdOutlineStackedLineChart className="text-[30px] text-[#af7353]" />
+            <MdOutlineStackedLineChart className="text-[30px] text-[#fff0f5]" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="box p-5  cursor-pointer hover:bg-[#f6f5f5] bg-[#fff0f5] rounded-md border-1 border-[#9ec49e] flex items-center gap-4">
-            <MdProductionQuantityLimits className="text-[30px] text-[#af9d5b]" />
+          <div className="box p-5  cursor-pointer  bg-[#af9d5b] rounded-md border-1 border-[#9ec49e] flex items-center gap-4">
+            <MdProductionQuantityLimits className="text-[30px] text-[#fff0f5]" />
             <div className="info w-[70%]">
               <h3>Products</h3>
               <b>1,378</b>
             </div>
-            <GiChart className="text-[30px] text-[#af9d5b]" />
+            <GiChart className="text-[30px] text-[#fff0f5]" />
           </div>
         </SwiperSlide>
       </Swiper>
