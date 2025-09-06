@@ -35,7 +35,7 @@ const SideBar = () => {
         </div>
         <ul className="mt-4 ">
           <li>
-            <Link to="/users">
+            <Link to="/">
               <Button className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#7e9f7e] !font-[500] !items-center !py-2">
                 <TbLayoutDashboardFilled className="text-[20px]" />
                 <span>Dashoard </span>
