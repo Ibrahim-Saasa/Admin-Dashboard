@@ -167,7 +167,7 @@ const OrderManagement = () => {
           </h1>
           <button
             onClick={addNewOrder}
-            className="border-2 border-[#9ec49e] hover:bg-[#9ec49e] text-black px-4 py-2 rounded-lg transition-colors"
+            className="border-2 border-[#9ec49e] hover:bg-gradient-to-r from-green-600 to-yellow-300 text-black px-4 py-2 rounded-lg transition-colors"
           >
             Add New Order
           </button>
@@ -203,7 +203,7 @@ const OrderManagement = () => {
           </div>
           <button
             onClick={regenerateAllOrderIds}
-            className="bg-[#9ec49e] hover:bg-[#799c79] text-black px-3 py-1 rounded text-sm transition-colors"
+            className="bg-gradient-to-r from-green-600 to-yellow-300 hover:bg-[#799c79] text-black px-3 py-1 rounded text-sm transition-colors"
           >
             Regenerate All IDs
           </button>
@@ -211,7 +211,7 @@ const OrderManagement = () => {
 
         <div className="relative overflow-x-auto bg-[#fff0f5]">
           <table className="w-full text-sm text-left">
-            <thead className="text-md bg-[#9ec49e] border-t border-[#000]">
+            <thead className="text-md bg-gradient-to-r from-green-600 to-yellow-300 border-t border-[#000]">
               <tr className="border-b border-[#000]">
                 <th scope="col" className="px-6 py-3">
                   Order ID

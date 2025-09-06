@@ -111,7 +111,7 @@ const SideBar = () => {
                   </Link>
                 </li>
                 <li className="w-full">
-                  <Link to="/product/add">
+                  <Link to="/products/add">
                     <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#7e9f7e] !font-[500] !pl-5">
                       <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
                       Product Upload
