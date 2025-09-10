@@ -27,7 +27,7 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="sidebar fixed top-0 left-0 bg-[#fff0f5] h-full border-r border-[#9ec49e] px-6 z-[60]">
+      <div className="sidebar fixed top-0 left-0 titanium h-full border-r border-[#9ec49e] px-6 z-[60]">
         <div className="w-full">
           <Link to="/">
             <img src={logo} className="w-[170px] " />
@@ -36,7 +36,7 @@ const SideBar = () => {
         <ul className="mt-4 ">
           <li>
             <Link to="/">
-              <Button className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#7e9f7e] !font-[500] !items-center !py-2">
+              <Button className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#000] !font-[500] !items-center !py-2">
                 <TbLayoutDashboardFilled className="text-[20px]" />
                 <span>Dashoard </span>
               </Button>
@@ -44,7 +44,7 @@ const SideBar = () => {
           </li>
           <li>
             <Button
-              className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#7e9f7e] !font-[500] !items-center !py-2"
+              className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#000] !font-[500] !items-center !py-2"
               onClick={() => isOpenSubMenu(1)}
             >
               <TbSlideshow className="text-[20px]" />
@@ -60,7 +60,7 @@ const SideBar = () => {
               <ul className="w-full">
                 <li className="w-full">
                   <Link to="/homeSlide/add">
-                    <Button className="w-full !capitalize !justify-start !flex gap-3 !text-[13px] !text-[#7e9f7e] !font-[500] !pl-5">
+                    <Button className="w-full !capitalize !justify-start !flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
                       <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
                       Add Home Banner Slide
                     </Button>
@@ -68,7 +68,7 @@ const SideBar = () => {
                 </li>
                 <li className="w-full">
                   <Link to="/homeSlide">
-                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#7e9f7e] !font-[500] !pl-5">
+                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
                       <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
                       Home Slides List
                     </Button>
@@ -79,7 +79,7 @@ const SideBar = () => {
           </li>
           <li>
             <Link to="/users">
-              <Button className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#7e9f7e] !font-[500] !items-center !py-2">
+              <Button className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#000] !font-[500] !items-center !py-2">
                 <FaUsers className="text-[20px]" />
                 <span>Users </span>
               </Button>
@@ -87,7 +87,7 @@ const SideBar = () => {
           </li>
           <li>
             <Button
-              className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#7e9f7e] !font-[500] !items-center !py-2"
+              className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#000] !font-[500] !items-center !py-2"
               onClick={() => isOpenSubMenu(2)}
             >
               <FaProductHunt className="text-[20px]" />
@@ -104,7 +104,7 @@ const SideBar = () => {
                 <li className="w-full">
                   {" "}
                   <Link to="/products">
-                    <Button className="w-full !capitalize !justify-start !flex gap-3 !text-[13px] !text-[#7e9f7e] !font-[500] !pl-5">
+                    <Button className="w-full !capitalize !justify-start !flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
                       <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
                       Product List
                     </Button>
@@ -112,7 +112,7 @@ const SideBar = () => {
                 </li>
                 <li className="w-full">
                   <Link to="/products/add">
-                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#7e9f7e] !font-[500] !pl-5">
+                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
                       <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
                       Product Upload
                     </Button>
@@ -123,7 +123,7 @@ const SideBar = () => {
           </li>
           <li>
             <Button
-              className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#7e9f7e] !font-[500] !items-center !py-2"
+              className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#000] !font-[500] !items-center !py-2"
               onClick={() => isOpenSubMenu(3)}
             >
               <MdCategory className="text-[20px]" />
@@ -139,7 +139,7 @@ const SideBar = () => {
               <ul className="w-full">
                 <li className="w-full">
                   <Link to="/categories">
-                    <Button className="w-full !capitalize !justify-start !flex gap-3 !text-[13px] !text-[#7e9f7e] !font-[500] !pl-5">
+                    <Button className="w-full !capitalize !justify-start !flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
                       <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
                       Category List
                     </Button>
@@ -147,7 +147,7 @@ const SideBar = () => {
                 </li>
                 <li className="w-full">
                   <Link to="/category/add">
-                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#7e9f7e] !font-[500] !pl-5">
+                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
                       <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
                       Add a Category
                     </Button>
@@ -155,7 +155,7 @@ const SideBar = () => {
                 </li>
                 <li className="w-full">
                   <Link to="/category/subCategory">
-                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#7e9f7e] !font-[500] !pl-5">
+                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
                       <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
                       Sub Category
                     </Button>
@@ -163,7 +163,7 @@ const SideBar = () => {
                 </li>
                 <li className="w-full">
                   <Link to="/category/subCategory/add">
-                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#7e9f7e] !font-[500] !pl-5">
+                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
                       <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
                       Add a Sub Category
                     </Button>
@@ -174,7 +174,7 @@ const SideBar = () => {
           </li>
           <li>
             <Link to="/orders">
-              <Button className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#7e9f7e] !font-[500] !items-center !py-2">
+              <Button className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#000] !font-[500] !items-center !py-2">
                 <FaShoppingBag className="text-[20px]" />
                 <span>Orders </span>
               </Button>
@@ -182,7 +182,7 @@ const SideBar = () => {
           </li>
           <li>
             <Link to="/logout">
-              <Button className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#7e9f7e] !font-[500] !items-center !py-2">
+              <Button className="w-full !capitalize !justify-start flex gap-3 !text-[18px] !text-[#000] !font-[500] !items-center !py-2">
                 <IoLogOut className="text-[20px]" />
                 <span>Logout </span>
               </Button>

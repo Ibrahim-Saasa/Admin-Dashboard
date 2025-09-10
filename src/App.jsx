@@ -7,6 +7,8 @@ import { createContext, useState } from "react";
 import Login from "./Pages/Login/Login";
 import Products from "./Pages/Products/Products";
 import ProductUpload from "./Pages/ProductUpload/ProductUpload";
+import HomeBanner from "./Pages/HomeBanner/HomeBanner";
+import BannerAdsManager from "./Pages/HomeBanner/HomeBanner";
 
 const MyContext = createContext();
 function App() {
@@ -19,7 +21,7 @@ function App() {
       exact: true,
       element: (
         <>
-          <section className="main ">
+          <section className=" py-3 px-3">
             <Header />
             <div className="contentMain flex w-full">
               <div
@@ -57,7 +59,7 @@ function App() {
       exact: true,
       element: (
         <>
-          <section className="main ">
+          <section className="main py-3 px-3">
             <Header />
             <div className="contentMain flex w-full">
               <div
@@ -86,7 +88,7 @@ function App() {
       exact: true,
       element: (
         <>
-          <section className="main ">
+          <section className="main py-3 px-3">
             <Header />
             <div className="contentMain flex w-full">
               <div
@@ -104,6 +106,35 @@ function App() {
                 } transition-all`}
               >
                 <ProductUpload />
+              </div>
+            </div>
+          </section>
+        </>
+      ),
+    },
+    {
+      path: "/homeSlide",
+      exact: true,
+      element: (
+        <>
+          <section className="main py-3 px-3">
+            <Header />
+            <div className="contentMain flex w-full">
+              <div
+                className={`overflow-hidden sidebarWrapper ${
+                  isSideBarOpen === true
+                    ? "w-[16%]"
+                    : "w-[0px] opacity-0 pointer-events-none"
+                } transition-all`}
+              >
+                <SideBar />
+              </div>
+              <div
+                className={`contentRight py-3 px-3 ${
+                  isSideBarOpen === false ? "w-[100%]" : "w-[84%]"
+                } transition-all`}
+              >
+                <BannerAdsManager />
               </div>
             </div>
           </section>

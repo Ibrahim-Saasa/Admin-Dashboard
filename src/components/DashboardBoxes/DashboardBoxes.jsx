@@ -23,7 +23,7 @@ const DashboardBoxes = () => {
         className="dashboardBoxesSlider "
       >
         <SwiperSlide>
-          <div className="box p-5 cursor-pointer  bg-[#6897b7] rounded-md border-1 border-[#9ec49e] flex items-center gap-4 ">
+          <div className="box p-5 cursor-pointer  metallic-blue rounded-md border-1 flex items-center gap-4 ">
             <CiGift className="text-[30px] text-[#fff0f5]" />
             <div className="info w-[70%]">
               <h3>New Orders</h3>
@@ -33,7 +33,7 @@ const DashboardBoxes = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="box p-5  cursor-pointer  bg-[#80b660] rounded-md border-1 border-[#9ec49e] flex items-center gap-4">
+          <div className="box p-5  cursor-pointer  metallic-green rounded-md border-1 flex items-center gap-4">
             <MdOutlineSell className="text-[30px] text-[#fff0f5]" />
             <div className="info w-[70%]">
               <h3>Sales</h3>
@@ -43,7 +43,7 @@ const DashboardBoxes = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="box p-5  cursor-pointer  bg-[#af7353] rounded-md border-1 border-[#9ec49e] flex items-center gap-4">
+          <div className="box p-5  cursor-pointer metallic-red rounded-md border-1 flex items-center gap-4">
             <RiBankLine className="text-[30px] text-[#fff0f5]" />
             <div className="info w-[70%]">
               <h3>Revenue</h3>
@@ -53,7 +53,7 @@ const DashboardBoxes = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="box p-5  cursor-pointer  bg-[#af9d5b] rounded-md border-1 border-[#9ec49e] flex items-center gap-4">
+          <div className="box p-5  cursor-pointer  metallic-gold rounded-md border-1 flex items-center gap-4">
             <MdProductionQuantityLimits className="text-[30px] text-[#fff0f5]" />
             <div className="info w-[70%]">
               <h3>Products</h3>

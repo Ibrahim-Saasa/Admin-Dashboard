@@ -465,7 +465,7 @@ const AdminProductTable = () => {
 
       {/* Main Content */}
       <div className="p-6">
-        <div className="bg-[#fff0f5] border-1 border-[#9ec49e] rounded-lg shadow-sm">
+        <div className="glass border-1 border-[#9ec49e] rounded-lg shadow-sm">
           {/* Header */}
           <div className="p-6 border-b border-gray-200">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -491,7 +491,7 @@ const AdminProductTable = () => {
                 )}
                 <button
                   onClick={() => setAddModalOpen(true)}
-                  className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+                  className="flex items-center gap-2 titanium !text-black px-4 py-2 rounded-lg transition-colors"
                 >
                   <Plus size={18} />
                   Add Product
@@ -541,7 +541,7 @@ const AdminProductTable = () => {
           {/* Table */}
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gray-50 border-b border-gray-200">
+              <thead className="titanium border-b border-gray-200">
                 <tr>
                   <th className="px-6 py-3 text-left">
                     <input

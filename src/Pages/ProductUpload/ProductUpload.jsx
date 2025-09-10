@@ -283,13 +283,13 @@ const ProductUpload = () => {
   return (
     <div className="py-5 ">
       <div className=" mx-auto ">
-        <div className=" rounded-lg shadow-lg overflow-hidden border-1 border-[#9ec49e]">
+        <div className=" rounded-lg shadow-lg overflow-hidden ">
           {/* Header */}
-          <div className="bg-gradient-to-r from-green-600 to-yellow-300 px-8 py-6">
-            <h1 className="text-3xl font-bold text-white">
+          <div className="titanium px-8 py-6">
+            <h1 className="text-3xl font-bold text-black">
               Upload New Product
             </h1>
-            <p className="text-blue-100 mt-2">
+            <p className="text-black mt-2">
               Add detailed product information across multiple categories
             </p>
           </div>
@@ -319,7 +319,7 @@ const ProductUpload = () => {
                   <div
                     className={`flex items-center justify-center w-10 h-10 rounded-full border-2 ${
                       currentStep >= item.step
-                        ? "bg-green-600 border-green-600 text-white"
+                        ? "titanium text-white"
                         : "border-gray-300 text-gray-400"
                     }`}
                   >
@@ -927,7 +927,7 @@ const ProductUpload = () => {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="px-8 py-6 bg-gray-50 border-t flex justify-between">
+          <div className="px-8 py-6 titanium border-t flex justify-between">
             <button
               onClick={prevStep}
               disabled={currentStep === 1}

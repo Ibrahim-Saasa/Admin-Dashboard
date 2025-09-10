@@ -40,11 +40,11 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full h-[auto] py-2 pr-7 ${
+      className={`w-full mx-auto h-[auto] py-2 px-5 ${
         context.isSideBarOpen === false
           ? "pl-5 sticky top-0"
           : "pl-64 sticky top-0"
-      } shadow-md bg-gradient-to-r from-green-600 to-yellow-300 flex items-center justify-between transition-all !z-50`}
+      } shadow-md titanium flex items-center justify-between transition-all !z-50`}
     >
       <div className="part1 ">
         <Button
@@ -56,7 +56,7 @@ const Header = () => {
       </div>
       <div className="part2 w-[40%] flex items-center justify-end gap-6">
         <Button className="!w-[40px] !h-[40px] !rounded-full !min-w-[40px] !text-[#000]">
-          <StyledBadge badgeContent={4} color="secondary">
+          <StyledBadge badgeContent={4}>
             <IoMdNotifications className="text-[18px] text-[#545454]" />
           </StyledBadge>
         </Button>
@@ -141,14 +141,14 @@ const Header = () => {
           </div>
         ) : (
           <Link to="/login">
-            <Button className="!py-2 !px-5 !text-[#000] !bg-[#fff0f5] hover:bg-gradient-to-r from-green-600 to-yellow-300 !rounded-full">
+            <Button className="!py-2 !px-5 !text-[#000] !glass titanium !rounded-full">
               Sign in
             </Button>
           </Link>
         )}
       </div>
     </header>
-    // <header className="w-full h-auto py-2 pl-62 pr-7 shadow-md bg-gradient-to-r from-green-600 to-yellow-300 flex items-center justify-between sticky top-0 z-50">
+    // <header className="w-full h-auto py-2 pl-62 pr-7 shadow-md titanium flex items-center justify-between sticky top-0 z-50">
     //   <div className="part1">
     //     <Button className="!w-[40px] !h-[40px] !rounded-full !min-w-[40px] !text-[#000]">
     //       <RiMenu2Fill className="text-[18px] text-[#545454]" />

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import bgImage from "../../assets/bg-login.jpg";
+import bgImage from "../../assets/titanium.jpg";
 import {
   CartesianGrid,
   Legend,
@@ -118,7 +118,7 @@ const Login = () => {
         </h1>
       </div>
       <div className="flex gap-5 items-start">
-        <div className="card shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-2xl p-4 bg-[#fff0f5] border-1 border-[#9ec49e] mt-20">
+        <div className="card shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-2xl p-4 glass border-1 border-[#9ec49e] mt-20">
           <BarChart width={500} height={300} data={chart1Data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
@@ -132,7 +132,7 @@ const Login = () => {
             Get Accurate Infographics.
           </h1>
         </div>
-        <div className="w-full max-w-md bg-[#fff0f5] shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-2xl p-8 border-2 border-[#9ec49e]">
+        <div className="w-full max-w-md glass shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-2xl p-8 border-2 border-[#9ec49e]">
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <div className="w-24 h-24 overflow-hidden rounded-full">
@@ -208,7 +208,7 @@ const Login = () => {
             </button>
           </div>
         </div>
-        <div className="card shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-2xl p-4 bg-[#fff0f5] border-1 border-[#9ec49e] mt-20">
+        <div className="card shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-2xl p-4 glass border-1 border-[#9ec49e] mt-20">
           <LineChart
             width={500}
             height={300}

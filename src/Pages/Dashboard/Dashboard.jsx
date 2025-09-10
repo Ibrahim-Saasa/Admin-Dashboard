@@ -134,7 +134,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="w-full py-2 px-5 border-1 rounded-md border-[#9ec49e] bg-[#fff0f5] flex items-center gap-8 mb-5 justify-between shadow-[0_0_15px_rgba(0,0,0,0.1)]">
+      <div className="w-full py-2 px-5 border-1 rounded-md flex items-center gap-8 mb-5 justify-between glass">
         <div className="info  gap-2">
           <h1 className="text-[35px] font-bold leading-10 mb-3">
             Good Morning, <br /> Ibrahim
@@ -144,7 +144,7 @@ const Dashboard = () => {
             Here is what's happening in your store. See the statistics at once.
           </p>
 
-          <Button className="btn-blue !capitalize ">
+          <Button className="titanium !text-black !capitalize ">
             <FaPlus className="mr-2" /> Add Product
           </Button>
         </div>
@@ -156,7 +156,7 @@ const Dashboard = () => {
       </div>
 
       <ProductManagement />
-      <div className="card my-4 shadow-[0_0_15px_rgba(0,0,0,0.1)] bg-[#fff0f5] border-1 border-[#9ec49e] rounded-md p-4 ">
+      <div className="card my-4 shadow-[0_0_15px_rgba(0,0,0,0.1)] glass border-1 border-[#9ec49e] rounded-md p-4 ">
         <div className="flex justify-between items-center p-4">
           <h1 className="text-2xl font-bold text-gray-800">
             Total Users & Sales
