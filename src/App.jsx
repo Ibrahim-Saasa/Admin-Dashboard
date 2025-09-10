@@ -1,5 +1,5 @@
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Header from "./components/Header/Header";
 import SideBar from "./components/SideBar/SideBar";
@@ -15,7 +15,7 @@ function App() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       exact: true,
