@@ -9,6 +9,7 @@ import Products from "./Pages/Products/Products";
 import ProductUpload from "./Pages/ProductUpload/ProductUpload";
 import HomeBanner from "./Pages/HomeBanner/HomeBanner";
 import BannerAdsManager from "./Pages/HomeBanner/HomeBanner";
+import CategoryManagement from "./Pages/CategoryList/CategoryList";
 
 const MyContext = createContext();
 function App() {
@@ -135,6 +136,35 @@ function App() {
                 } transition-all`}
               >
                 <BannerAdsManager />
+              </div>
+            </div>
+          </section>
+        </>
+      ),
+    },
+    {
+      path: "/categories",
+      exact: true,
+      element: (
+        <>
+          <section className="main py-3 px-3">
+            <Header />
+            <div className="contentMain flex w-full">
+              <div
+                className={`overflow-hidden sidebarWrapper ${
+                  isSideBarOpen === true
+                    ? "w-[16%]"
+                    : "w-[0px] opacity-0 pointer-events-none"
+                } transition-all`}
+              >
+                <SideBar />
+              </div>
+              <div
+                className={`contentRight py-3 px-3 ${
+                  isSideBarOpen === false ? "w-[100%]" : "w-[84%]"
+                } transition-all`}
+              >
+                <CategoryManagement />
               </div>
             </div>
           </section>

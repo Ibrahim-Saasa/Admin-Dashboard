@@ -40,11 +40,11 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full mx-auto h-[auto] py-2 px-5 ${
-        context.isSideBarOpen === false
-          ? "pl-5 sticky top-0"
-          : "pl-64 sticky top-0"
-      } shadow-md titanium flex items-center justify-between transition-all !z-50`}
+      className={`mx-auto py-2 px-3 sm:px-5 sticky top-0 shadow-md titanium flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0 transition-all z-50`}
+      style={{
+        marginLeft: context.isSideBarOpen ? "16rem" : "0",
+        width: context.isSideBarOpen ? "calc(100% - 16rem)" : "100%",
+      }}
     >
       <div className="part1 ">
         <Button
