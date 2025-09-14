@@ -159,8 +159,8 @@ const OrderManagement = () => {
   };
 
   return (
-    <div className="max-w-full mx-auto glass">
-      <div className=" p-6">
+    <div className="max-w-full mx-auto glass !rounded-lg shadow-lg">
+      <div className="!rounded-lg shadow-lg p-6">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold text-gray-800">
             Order Management Dashboard
