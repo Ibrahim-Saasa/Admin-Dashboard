@@ -11,11 +11,13 @@ import HomeBanner from "./Pages/HomeBanner/HomeBanner";
 import BannerAdsManager from "./Pages/HomeBanner/HomeBanner";
 import CategoryManagement from "./Pages/CategoryList/CategoryList";
 import UsersPage from "./Pages/Users/Users";
+import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
+import Verify from "./Pages/Verify/Verify";
 
 const MyContext = createContext();
 function App() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
 
   const router = createHashRouter([
     {
@@ -53,6 +55,24 @@ function App() {
       element: (
         <>
           <Login />
+        </>
+      ),
+    },
+    {
+      path: "/forgotPassword",
+      exact: true,
+      element: (
+        <>
+          <ForgotPassword />
+        </>
+      ),
+    },
+    {
+      path: "/forgotPassword/verify",
+      exact: true,
+      element: (
+        <>
+          <Verify />
         </>
       ),
     },

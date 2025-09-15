@@ -178,14 +178,12 @@ const Login = () => {
             </div>
 
             <div className="flex justify-between text-sm text-gray-600">
-              <a href="#" className="hover:text-green-600">
-                Forgot password?
-              </a>
+              <Link to="/forgotPassword">Forgot password?</Link>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition-colors"
+              className="w-full titanium !text-black cursor-pointer py-2 rounded-lg transition-colors"
             >
               Get Started
             </button>
@@ -200,10 +198,10 @@ const Login = () => {
 
           {/* Social Logins */}
           <div className="flex justify-center gap-4">
-            <button className="flex items-center gap-2 border rounded-lg px-4 py-2 hover:bg-gray-100">
-              <FaGoogle className="text-red-500" /> Google
+            <button className="flex items-center gap-2 border rounded-lg px-4 py-2 social">
+              <FaGoogle className=" " /> Google
             </button>
-            <button className="flex items-center gap-2 border rounded-lg px-4 py-2 hover:bg-gray-100">
+            <button className="flex items-center gap-2 border rounded-lg px-4 py-2 social1">
               <FaApple className="text-black" /> Apple
             </button>
           </div>

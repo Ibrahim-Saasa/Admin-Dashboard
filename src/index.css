@@ -69,6 +69,24 @@ body {
   color: #fff;
   padding: 20px;
 }
+.social:hover {
+  background: linear-gradient(135deg, #e74c3c, #c0392b, #922b21);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+}
+.social1:hover {
+  background: linear-gradient(135deg, #f1c40f, #b8860b, #8e7000);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+}
 .metallic-green {
   background: linear-gradient(135deg, #2ecc71, #27ae60, #1e8449);
   border-radius: 12px;

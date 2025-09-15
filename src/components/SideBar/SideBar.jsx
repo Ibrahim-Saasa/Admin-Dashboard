@@ -59,14 +59,6 @@ const SideBar = () => {
             <Collapse isOpened={subMenuIndex === 1 ? true : false}>
               <ul className="w-full">
                 <li className="w-full">
-                  <Link to="/homeSlide/add">
-                    <Button className="w-full !capitalize !justify-start !flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
-                      <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
-                      Add Home Banner Slide
-                    </Button>
-                  </Link>
-                </li>
-                <li className="w-full">
                   <Link to="/homeSlide">
                     <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
                       <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
@@ -110,14 +102,6 @@ const SideBar = () => {
                     </Button>
                   </Link>
                 </li>
-                <li className="w-full">
-                  <Link to="/products/add">
-                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
-                      <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
-                      Product Upload
-                    </Button>
-                  </Link>
-                </li>
               </ul>
             </Collapse>
           </li>
@@ -142,30 +126,6 @@ const SideBar = () => {
                     <Button className="w-full !capitalize !justify-start !flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
                       <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
                       Category List
-                    </Button>
-                  </Link>
-                </li>
-                <li className="w-full">
-                  <Link to="/category/add">
-                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
-                      <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
-                      Add a Category
-                    </Button>
-                  </Link>
-                </li>
-                <li className="w-full">
-                  <Link to="/category/subCategory">
-                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
-                      <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
-                      Sub Category
-                    </Button>
-                  </Link>
-                </li>
-                <li className="w-full">
-                  <Link to="/category/subCategory/add">
-                    <Button className="w-full !capitalize !justify-start flex gap-3 !text-[13px] !text-[#000] !font-[500] !pl-5">
-                      <span className="block w-[5px] h-[5px] rounded-full bg-[green]"></span>
-                      Add a Sub Category
                     </Button>
                   </Link>
                 </li>
