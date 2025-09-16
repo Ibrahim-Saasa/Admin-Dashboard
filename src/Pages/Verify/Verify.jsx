@@ -13,9 +13,7 @@ const Verify = () => {
         <section className="section !py-10">
           <div className="container">
             <div className="card shadow-[0_0_15px_rgba(0,0,0,0.3)] w-[500px] !m-auto rounded-md glass !p-5 !px-12">
-              <div className="text-center flex items-center justify-center">
-                <img src={insurance} alt="insurance" className="w-[80px]" />
-              </div>
+              <div className="text-center flex items-center justify-center"></div>
               <h3 className="text-center text-[18px] text-[#000] font-[500] !mt-4">
                 Verify OTP
               </h3>
