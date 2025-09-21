@@ -8,7 +8,7 @@ const Verify = () => {
     <>
       <div
         className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: `url(${bgImage})` }}
+        // style={{ backgroundImage: `url(${bgImage})` }}
       >
         <section className="section !py-10">
           <div className="container">
