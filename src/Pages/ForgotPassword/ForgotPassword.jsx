@@ -7,12 +7,11 @@ import bgImage from "../../assets/titanium.jpg";
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
   const context = useContext(MyContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Email:", email, "Password:", password);
+    console.log("Email:", email);
   };
 
   return (

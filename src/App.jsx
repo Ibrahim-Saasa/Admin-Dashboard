@@ -68,7 +68,7 @@ function App() {
       ),
     },
     {
-      path: "/forgotPassword/verify",
+      path: "/verify",
       exact: true,
       element: (
         <>

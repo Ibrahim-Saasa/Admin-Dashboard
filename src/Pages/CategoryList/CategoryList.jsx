@@ -256,7 +256,7 @@ const CategoryManagement = () => {
               </div>
               <button
                 onClick={() => openModal()}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors"
+                className="metallic-blue text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors"
               >
                 <Plus size={18} />
                 <span>Add Category</span>
@@ -323,7 +323,7 @@ const CategoryManagement = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div className="fixed inset-0 titanium bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="glass rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="px-6 py-4 border-b border-gray-200">
               <div className="flex justify-between items-center">
@@ -332,7 +332,7 @@ const CategoryManagement = () => {
                 </h2>
                 <button
                   onClick={closeModal}
-                  className="text-gray-400 hover:text-gray-600 p-1 rounded"
+                  className="!text-black hover:text-gray-600 p-1 rounded"
                 >
                   <X size={20} />
                 </button>
@@ -342,7 +342,7 @@ const CategoryManagement = () => {
             <div className="p-6 space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-black mb-2">
                     Category Name *
                   </label>
                   <input
@@ -350,20 +350,20 @@ const CategoryManagement = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 focus:border-transparent"
                     placeholder="Enter category name"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-black mb-2">
                     Parent Category
                   </label>
                   <select
                     name="parentId"
                     value={formData.parentId || ""}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 focus:border-transparent"
                   >
                     <option value="">Root Category</option>
                     {getParentCategories().map((cat) => (
@@ -376,7 +376,7 @@ const CategoryManagement = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Heading
                 </label>
                 <input
@@ -384,13 +384,13 @@ const CategoryManagement = () => {
                   name="heading"
                   value={formData.heading}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 focus:border-transparent"
                   placeholder="Category heading for display"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Description
                 </label>
                 <textarea
@@ -398,13 +398,13 @@ const CategoryManagement = () => {
                   value={formData.description}
                   onChange={handleInputChange}
                   rows="3"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 focus:border-transparent"
                   placeholder="Category description"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Category Image URL
                 </label>
                 <div className="flex space-x-2">
@@ -413,7 +413,7 @@ const CategoryManagement = () => {
                     name="image"
                     value={formData.image}
                     onChange={handleInputChange}
-                    className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 focus:border-transparent"
                     placeholder="https://example.com/image.jpg"
                   />
                   <button
@@ -437,7 +437,7 @@ const CategoryManagement = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-black mb-2">
                     Sort Order
                   </label>
                   <input
@@ -446,7 +446,7 @@ const CategoryManagement = () => {
                     value={formData.sortOrder}
                     onChange={handleInputChange}
                     min="1"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-gray-800 focus:border-transparent"
                   />
                 </div>
 
@@ -457,9 +457,9 @@ const CategoryManagement = () => {
                       name="isActive"
                       checked={formData.isActive}
                       onChange={handleInputChange}
-                      className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                      className="rounded border-gray-300 focus:ring-blue-500 text-gray-800"
                     />
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-black">
                       Active
                     </span>
                   </label>
@@ -469,13 +469,13 @@ const CategoryManagement = () => {
               <div className="flex justify-end space-x-3 pt-4 border-t border-gray-200">
                 <button
                   onClick={closeModal}
-                  className="px-4 py-2 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                  className="px-4 py-2 !text-black titanium hover:bg-gray-200 rounded-lg transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleSubmit}
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center space-x-2 transition-colors"
+                  className="px-4 py-2 metallic-blue text-white rounded-lg flex items-center space-x-2 transition-colors"
                 >
                   <Save size={16} />
                   <span>{editingCategory ? "Update" : "Create"} Category</span>

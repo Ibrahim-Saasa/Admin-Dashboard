@@ -1,6 +1,6 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import centurio from "../../assets/l.png";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
 import Button from "@mui/material/Button";
 import { TbLayoutDashboardFilled } from "react-icons/tb";
 import { TbSlideshow } from "react-icons/tb";
@@ -25,12 +25,14 @@ const SideBar = () => {
 
   const context = useContext(MyContext);
 
+  console.log(centurio);
+
   return (
     <>
       <div className="sidebar fixed top-0 left-0 titanium h-full border-r border-[#9ec49e] px-6 z-[60]">
         <div className="w-full">
           <Link to="/">
-            <img src={logo} className="w-[170px] " />
+            <img src={centurio} className="w-[170px]" />
           </Link>
         </div>
         <ul className="mt-4 ">
