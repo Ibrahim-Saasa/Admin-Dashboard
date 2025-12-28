@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { FaGoogle, FaApple } from "react-icons/fa";
-import logo1 from "../../assets/logo1.png";
+import logo1 from "../../assets/l.png";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -108,13 +108,10 @@ const Login = () => {
   };
 
   return (
-    <div
-      className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <div className="min-h-screen metal-bg flex flex-col items-center justify-center bg-cover bg-center">
       <div>
-        <h1 className="font-bold mb-5 text-[30px] text-center bg-gradient-to-r from-[#cf9633] via-[#af7d27] to-[#cf9633] bg-clip-text text-transparent">
-          Join Us Today! Get Special Benefits, <br /> and Stay Up to Data!
+        <h1 className="font-semibold text-[30px] text-center text-[var(--gunmetal)] tracking-wide">
+          Join Us Today. Get Exclusive Access.
         </h1>
       </div>
       <div className="flex gap-5 items-start">
@@ -125,24 +122,24 @@ const Login = () => {
             <YAxis />
             <Tooltip />
 
-            <Bar dataKey="pv" stackId="a" fill="#cf9633" />
-            <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
+            <Bar dataKey="pv" stackId="a" fill="#8d99ae" />
+            <Bar dataKey="uv" stackId="a" fill="#edf2f4" />
           </BarChart>
-          <h1 className="font-bold mb-5 text-[30px] text-center bg-gradient-to-r from-green-900 via-green-700 to-green-600 bg-clip-text text-transparent">
+          <h1 className="font-bold mb-5 text-[30px] text-center bg-gradient-to-r from-[var(--slate)] via-[var(--gunmetal)] to-[var(--slate)] bg-clip-text text-transparent">
             Get Accurate Infographics.
           </h1>
         </div>
         <div className="w-full max-w-md glass shadow-[0_0_15px_rgba(0,0,0,0.1)] rounded-2xl p-8 border-2 border-[#9ec49e]">
           {/* Logo */}
           <div className="flex justify-center mb-6">
-            <div className="w-24 h-24 overflow-hidden rounded-full">
+            <div className="w-30 h-24 overflow-hidden rounded-full">
               {" "}
               <img src={logo1} alt="" className="w-full h-full object-cover" />
             </div>
           </div>
 
           {/* Title */}
-          <h2 className="text-center text-2xl mb-2 font-bold bg-gradient-to-r from-green-900 via-green-700 to-green-600 bg-clip-text text-transparent">
+          <h2 className="text-center text-2xl mb-2 font-bold bg-gradient-to-r from-[var(--slate)] via-[var(--gunmetal)] to-[var(--slate)] bg-clip-text text-transparent">
             Sign in with email
           </h2>
           <p className="text-center text-gray-500 text-sm mb-6">
@@ -154,7 +151,7 @@ const Login = () => {
             <input
               type="email"
               placeholder="Email"
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
+              className="w-full input-metal px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 outline-none"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -163,7 +160,7 @@ const Login = () => {
               <input
                 type={showPassword ? "text" : "password"} // 👈 toggle type
                 placeholder="Password"
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
+                className="w-full input-metal px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 outline-none"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -183,7 +180,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full titanium !text-black cursor-pointer py-2 rounded-lg transition-colors"
+              className="w-full titanium-btn py-2 cursor-pointer transition-colors rounded-lg"
             >
               Get Started
             </button>
@@ -228,7 +225,7 @@ const Login = () => {
               yAxisId="left"
               type="monotone"
               dataKey="pv"
-              stroke="#cf9633"
+              stroke="#e5e7eb"
               strokeWidth={4}
               activeDot={{ r: 8 }}
             />
@@ -236,11 +233,11 @@ const Login = () => {
               yAxisId="right"
               type="monotone"
               dataKey="uv"
-              stroke="#82ca9d"
+              stroke="#8d99ae"
               strokeWidth={4}
             />
           </LineChart>
-          <h1 className="font-bold mb-5 text-[30px] text-center bg-gradient-to-r from-green-900 via-green-700 to-green-600 bg-clip-text text-transparent">
+          <h1 className="font-bold mb-5 text-[30px] text-center bg-gradient-to-r from-[var(--slate)] via-[var(--gunmetal)] to-[var(--slate)] bg-clip-text text-transparent">
             For Easier Understanding.
           </h1>
         </div>
