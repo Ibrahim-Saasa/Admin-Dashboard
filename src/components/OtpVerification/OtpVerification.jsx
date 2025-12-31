@@ -23,7 +23,7 @@ const OTPVerification = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center rounded-lg  !mt-4 titanium border-2 border-[#0c8563]">
+    <div className="flex flex-col items-center justify-center rounded-lg  !mt-4 titanium-btn border-2 border-[#0c8563]">
       <div className=" !p-8 rounded-2xl shadow-md w-full max-w-md">
         <form
           onSubmit={handleSubmit}

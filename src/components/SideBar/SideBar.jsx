@@ -29,7 +29,7 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="sidebar fixed top-0 left-0 titanium h-full border-r border-[#9ec49e] px-6 z-[60]">
+      <div className="sidebar fixed top-0 left-0 titanium-btn h-full border-r border-[#9ec49e] px-6 z-[60]">
         <div className="w-full">
           <Link to="/">
             <img src={centurio} className="w-[170px]" />

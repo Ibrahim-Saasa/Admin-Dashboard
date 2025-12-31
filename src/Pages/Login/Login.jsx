@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import bgImage from "../../assets/titanium.jpg";
+import { useNavigate } from "react-router-dom";
+
 import {
   CartesianGrid,
   Legend,
@@ -21,8 +22,11 @@ import {
   PieChart,
 } from "recharts";
 import { MyContext } from "../../App";
+import { postData } from "../../api";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [chart1Data, setChart1Data] = useState([
     {
       name: "January",
@@ -102,9 +106,25 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const context = useContext(MyContext);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Email:", email, "Password:", password);
+
+    const res = await postData("/api/admin/login", {
+      email,
+      password,
+    });
+
+    console.log("ADMIN LOGIN RESPONSE:", res);
+
+    // ✅ THIS is the correct check
+    if (res.success === true && res.token) {
+      localStorage.setItem("adminToken", res.token);
+      localStorage.setItem("admin", JSON.stringify(res.admin));
+      context.setIsLogin(true);
+      navigate("/dashboard");
+    } else {
+      alert(res.message || "Login failed");
+    }
   };
 
   return (
@@ -180,7 +200,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full titanium-btn py-2 cursor-pointer transition-colors rounded-lg"
+              className="w-full titanium-btn-btn py-2 cursor-pointer transition-colors rounded-lg"
             >
               Get Started
             </button>

@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import logo1 from "../../assets/l.png";
 import { MyContext } from "../../App";
 import { Link } from "react-router-dom";
-import bgImage from "../../assets/titanium.jpg";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -53,7 +52,7 @@ const ForgotPassword = () => {
             <Link to="/verify">
               <button
                 type="submit"
-                className="w-full titanium !text-black cursor-pointer py-2 rounded-lg transition-colors"
+                className="w-full titanium-btn !text-black cursor-pointer py-2 rounded-lg transition-colors"
               >
                 Send Code
               </button>

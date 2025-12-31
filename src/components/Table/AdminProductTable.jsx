@@ -491,7 +491,7 @@ const AdminProductTable = () => {
                 )}
                 <button
                   onClick={() => setAddModalOpen(true)}
-                  className="flex items-center gap-2 titanium !text-black px-4 py-2 rounded-lg transition-colors"
+                  className="flex items-center gap-2 titanium-btn !text-black px-4 py-2 rounded-lg transition-colors"
                 >
                   <Plus size={18} />
                   Add Product
@@ -541,7 +541,7 @@ const AdminProductTable = () => {
           {/* Table */}
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="titanium border-b border-gray-200">
+              <thead className="titanium-btn border-b border-gray-200">
                 <tr>
                   <th className="px-6 py-3 text-left">
                     <input

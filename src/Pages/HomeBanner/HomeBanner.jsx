@@ -221,7 +221,7 @@ const BannerAdsManager = () => {
             </div>
             <button
               onClick={handleAddBanner}
-              className="flex items-center gap-2 titanium cursor-pointer !text-black px-6 py-3 rounded-lg font-medium transition-colors"
+              className="flex items-center gap-2 titanium-btn cursor-pointer !text-black px-6 py-3 rounded-lg font-medium transition-colors"
             >
               <svg
                 className="w-5 h-5"
@@ -245,7 +245,7 @@ const BannerAdsManager = () => {
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="titanium p-6 rounded-lg shadow-sm border">
+          <div className="titanium-btn p-6 rounded-lg shadow-sm border">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">
@@ -273,7 +273,7 @@ const BannerAdsManager = () => {
             </div>
           </div>
 
-          <div className="titanium p-6 rounded-lg shadow-sm border">
+          <div className="titanium-btn p-6 rounded-lg shadow-sm border">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">
@@ -301,7 +301,7 @@ const BannerAdsManager = () => {
             </div>
           </div>
 
-          <div className="titanium p-6 rounded-lg shadow-sm border">
+          <div className="titanium-btn p-6 rounded-lg shadow-sm border">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Scheduled</p>
@@ -327,7 +327,7 @@ const BannerAdsManager = () => {
             </div>
           </div>
 
-          <div className="titanium p-6 rounded-lg shadow-sm border">
+          <div className="titanium-btn p-6 rounded-lg shadow-sm border">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">
@@ -357,7 +357,7 @@ const BannerAdsManager = () => {
         </div>
 
         {/* Filters and Search */}
-        <div className="titanium p-6 rounded-lg shadow-sm border mb-8">
+        <div className="titanium-btn p-6 rounded-lg shadow-sm border mb-8">
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="relative">
@@ -408,7 +408,7 @@ const BannerAdsManager = () => {
           {filteredBanners.map((banner) => (
             <div
               key={banner.id}
-              className="titanium rounded-lg shadow-sm border overflow-hidden hover:shadow-md transition-shadow"
+              className="titanium-btn rounded-lg shadow-sm border overflow-hidden hover:shadow-md transition-shadow"
             >
               {/* Banner Image */}
               <div className="aspect-video bg-gray-200 relative overflow-hidden">
@@ -585,7 +585,7 @@ const BannerAdsManager = () => {
       {/* Modal for Add/Edit Banner */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="titanium rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+          <div className="titanium-btn rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
             <div className="p-6 border-b">
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-gray-900">

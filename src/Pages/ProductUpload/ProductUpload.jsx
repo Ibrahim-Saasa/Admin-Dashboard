@@ -285,7 +285,7 @@ const ProductUpload = () => {
       <div className=" mx-auto ">
         <div className=" rounded-lg shadow-lg overflow-hidden ">
           {/* Header */}
-          <div className="titanium px-8 py-6">
+          <div className="titanium-btn px-8 py-6">
             <h1 className="text-3xl font-bold text-black">
               Upload New Product
             </h1>
@@ -319,7 +319,7 @@ const ProductUpload = () => {
                   <div
                     className={`flex items-center justify-center w-10 h-10 rounded-full border-2 ${
                       currentStep >= item.step
-                        ? "titanium text-white"
+                        ? "titanium-btn text-white"
                         : "border-gray-300 text-gray-400"
                     }`}
                   >
@@ -927,7 +927,7 @@ const ProductUpload = () => {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="px-8 py-6 titanium border-t flex justify-between">
+          <div className="px-8 py-6 titanium-btn border-t flex justify-between">
             <button
               onClick={prevStep}
               disabled={currentStep === 1}

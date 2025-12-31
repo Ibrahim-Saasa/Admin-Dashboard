@@ -144,7 +144,7 @@ const Dashboard = () => {
             Here is what's happening in your store. See the statistics at once.
           </p>
 
-          <Button className="titanium !text-black !capitalize ">
+          <Button className="titanium-btn !text-black !capitalize ">
             <FaPlus className="mr-2" /> Add Product
           </Button>
         </div>

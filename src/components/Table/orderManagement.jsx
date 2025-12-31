@@ -167,7 +167,7 @@ const OrderManagement = () => {
           </h1>
           <button
             onClick={addNewOrder}
-            className="border-2 border-[#9ec49e] titanium !text-black px-4 py-2 rounded-lg transition-colors"
+            className="border-2 border-[#9ec49e] titanium-btn !text-black px-4 py-2 rounded-lg transition-colors"
           >
             Add New Order
           </button>
@@ -203,7 +203,7 @@ const OrderManagement = () => {
           </div>
           <button
             onClick={regenerateAllOrderIds}
-            className="titanium hover:bg-[#799c79] !text-black px-3 py-1 rounded text-sm transition-colors"
+            className="titanium-btn hover:bg-[#799c79] !text-black px-3 py-1 rounded text-sm transition-colors"
           >
             Regenerate All IDs
           </button>
@@ -211,7 +211,7 @@ const OrderManagement = () => {
 
         <div className="max-w-full mx-auto glass rounded-md shadow-lg">
           <table className="w-full text-sm text-left">
-            <thead className="text-md titanium border-t border-[#000]">
+            <thead className="text-md titanium-btn border-t border-[#000]">
               <tr className="border-b border-[#000] !text-black">
                 <th scope="col" className="px-6 py-3">
                   Order ID

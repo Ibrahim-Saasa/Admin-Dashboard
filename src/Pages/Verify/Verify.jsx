@@ -1,7 +1,6 @@
 import React from "react";
 import insurance from "../../assets/insurance.png";
 import OTPVerification from "../../components/OtpVerification/OtpVerification";
-import bgImage from "../../assets/titanium.jpg";
 
 const Verify = () => {
   return (

@@ -225,7 +225,7 @@ const ProductManagement = () => {
             )}
             <button
               onClick={addNewProduct}
-              className="border-2 border-[#9ec49e] titanium !text-black px-4 py-2 rounded-lg transition-colors"
+              className="border-2 border-[#9ec49e] titanium-btn !text-black px-4 py-2 rounded-lg transition-colors"
             >
               Add New Product
             </button>
@@ -337,7 +337,7 @@ const ProductManagement = () => {
 
         <div className="relative overflow-x-auto">
           <table className="w-full text-sm text-left">
-            <thead className="text-md titanium border-t border-[#000]">
+            <thead className="text-md titanium-btn border-t border-[#000]">
               <tr className="border-b border-[#000] !text-black">
                 <th scope="col" className="px-6 py-3">
                   <input

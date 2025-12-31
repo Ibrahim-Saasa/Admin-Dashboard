@@ -265,7 +265,7 @@ const CategoryManagement = () => {
           </div>
 
           {/* Stats */}
-          <div className="px-6 py-4 border-b border-gray-200 titanium mb-2">
+          <div className="px-6 py-4 border-b border-gray-200 titanium-btn mb-2">
             <div className="flex space-x-6">
               <div className="text-center">
                 <div className="text-2xl font-bold text-blue-600">
@@ -291,7 +291,7 @@ const CategoryManagement = () => {
           {/* Table */}
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="titanium border-b border-gray-200">
+              <thead className="titanium-btn border-b border-gray-200">
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Category
@@ -323,7 +323,7 @@ const CategoryManagement = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 titanium bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div className="fixed inset-0 titanium-btn bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="glass rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="px-6 py-4 border-b border-gray-200">
               <div className="flex justify-between items-center">
@@ -469,7 +469,7 @@ const CategoryManagement = () => {
               <div className="flex justify-end space-x-3 pt-4 border-t border-gray-200">
                 <button
                   onClick={closeModal}
-                  className="px-4 py-2 !text-black titanium hover:bg-gray-200 rounded-lg transition-colors"
+                  className="px-4 py-2 !text-black titanium-btn hover:bg-gray-200 rounded-lg transition-colors"
                 >
                   Cancel
                 </button>

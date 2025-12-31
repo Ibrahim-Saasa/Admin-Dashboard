@@ -269,7 +269,7 @@ const UsersPage = () => {
         <div className="glass rounded-lg shadow-sm border overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="titanium border-b">
+              <thead className="titanium-btn border-b">
                 <tr>
                   <th
                     className="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:glass"
