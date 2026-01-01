@@ -16,9 +16,10 @@ import { VscAccount } from "react-icons/vsc";
 import { TbLogout2 } from "react-icons/tb";
 import { CiSettings } from "react-icons/ci";
 import { MyContext } from "../../App";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const StyledBadge = styled(Badge)(({ theme }) => ({
     "& .MuiBadge-badge": {
       right: -3,
@@ -37,7 +38,11 @@ const Header = () => {
   };
 
   const context = useContext(MyContext);
-
+  const handleLogout = () => {
+    sessionStorage.clear(); // ✅ Clear sessionStorage
+    context.setIsLogin(false); // ✅ Update context
+    navigate("/");
+  };
   return (
     <header
       className={`mx-auto py-2 px-3 sm:px-5 sticky top-0 shadow-md titanium-btn flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0 transition-all z-50`}
@@ -131,7 +136,7 @@ const Header = () => {
               </MenuItem>
 
               <MenuItem
-                onClick={handleClose}
+                onClick={handleLogout}
                 className="flex items-center gap-3"
               >
                 <TbLogout2 className="text-[20px]" />

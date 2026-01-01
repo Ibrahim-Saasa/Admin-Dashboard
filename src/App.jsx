@@ -21,13 +21,25 @@ function App() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   useEffect(() => {
-    const token = localStorage.getItem("adminToken");
+    const token = sessionStorage.getItem("accessToken");
 
     if (token) {
       setIsLogin(true);
     } else {
       setIsLogin(false);
     }
+
+    // ✅ Listen for when the tab/window is closed
+    const handleBeforeUnload = () => {
+      // sessionStorage automatically clears, but we can also manually clear
+      sessionStorage.clear();
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
   }, []);
 
   const router = createHashRouter([

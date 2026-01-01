@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaGoogle, FaApple } from "react-icons/fa";
 import logo1 from "../../assets/l.png";
 import { Link } from "react-router-dom";
@@ -105,25 +105,44 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const context = useContext(MyContext);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const token = sessionStorage.getItem("accessToken");
+    if (token) {
+      context.setIsLogin(true);
+      navigate("/dashboard");
+    }
+  }, [navigate, context]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
-    const res = await postData("/api/admin/login", {
-      email,
-      password,
-    });
+    try {
+      const res = await postData("/api/admin/login", {
+        email,
+        password,
+      });
 
-    console.log("ADMIN LOGIN RESPONSE:", res);
+      console.log("ADMIN LOGIN RESPONSE:", res);
 
-    // ✅ THIS is the correct check
-    if (res.success === true && res.token) {
-      localStorage.setItem("adminToken", res.token);
-      localStorage.setItem("admin", JSON.stringify(res.admin));
-      context.setIsLogin(true);
-      navigate("/dashboard");
-    } else {
-      alert(res.message || "Login failed");
+      // ✅ Check for success
+      if (res.success === true && res.token) {
+        // Store in sessionStorage (clears when tab closes)
+        sessionStorage.setItem("accessToken", res.token);
+        sessionStorage.setItem("adminEmail", res.admin?.email || email);
+
+        context.setIsLogin(true);
+        navigate("/dashboard");
+      } else {
+        alert(res.message || "Login failed");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("Something went wrong!");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -200,7 +219,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full titanium-btn-btn py-2 cursor-pointer transition-colors rounded-lg"
+              className="w-full titanium-btn py-2 cursor-pointer transition-colors rounded-lg"
             >
               Get Started
             </button>
