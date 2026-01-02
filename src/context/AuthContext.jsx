@@ -9,6 +9,24 @@ export const AuthProvider = ({ children }) => {
     const token = sessionStorage.getItem("accessToken");
     setIsLogin(!!token);
   }, []);
+  useEffect(() => {
+    const token = sessionStorage.getItem("adminToken");
+    if (!token) return;
+
+    const fetchAdmin = async () => {
+      try {
+        const res = await api.get("/admin/me");
+        setAdmin(res.data.admin);
+        setIsLogin(true);
+      } catch (err) {
+        sessionStorage.clear();
+        setAdmin(null);
+        setIsLogin(false);
+      }
+    };
+
+    fetchAdmin();
+  }, []);
 
   const logout = () => {
     sessionStorage.removeItem("accessToken");

@@ -15,28 +15,32 @@ import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import Verify from "./Pages/Verify/Verify";
 import ProtectedRoute from "./components/protectedRoute/protectedRoute";
 import { Routes, Route, Navigate } from "react-router-dom";
+import AdminProfile from "./Pages/AdminProfile/AdminProfile";
 
 const MyContext = createContext();
+
 function App() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
+  const [admin, setAdmin] = useState(null);
+
   useEffect(() => {
     const token = sessionStorage.getItem("accessToken");
+    const adminData = sessionStorage.getItem("adminData");
 
-    if (token) {
+    if (token && adminData) {
       setIsLogin(true);
-    } else {
-      setIsLogin(false);
+      setAdmin(JSON.parse(adminData));
     }
 
     // ✅ Listen for when the tab/window is closed
     const handleBeforeUnload = () => {
-      // sessionStorage automatically clears, but we can also manually clear
       sessionStorage.clear();
     };
 
     window.addEventListener("beforeunload", handleBeforeUnload);
 
+    // ✅ Cleanup function (properly inside useEffect)
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
     };
@@ -252,9 +256,47 @@ function App() {
         </>
       ),
     },
+    {
+      path: "/admin/profile",
+      exact: true,
+      element: (
+        <>
+          <ProtectedRoute>
+            <section className="main py-3 px-3">
+              <Header />
+              <div className="contentMain flex w-full">
+                <div
+                  className={`overflow-hidden sidebarWrapper ${
+                    isSideBarOpen === true
+                      ? "w-[16%]"
+                      : "w-[0px] opacity-0 pointer-events-none"
+                  } transition-all`}
+                >
+                  <SideBar />
+                </div>
+                <div
+                  className={`contentRight py-3 px-3 ${
+                    isSideBarOpen === false ? "w-[100%]" : "w-[84%]"
+                  } transition-all`}
+                >
+                  <AdminProfile />
+                </div>
+              </div>
+            </section>
+          </ProtectedRoute>
+        </>
+      ),
+    },
   ]);
 
-  const values = { isSideBarOpen, setIsSideBarOpen, isLogin, setIsLogin };
+  const values = {
+    isSideBarOpen,
+    setIsSideBarOpen,
+    isLogin,
+    setIsLogin,
+    admin,
+    setAdmin,
+  };
 
   return (
     <>

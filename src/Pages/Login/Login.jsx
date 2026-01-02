@@ -22,7 +22,7 @@ import {
   PieChart,
 } from "recharts";
 import { MyContext } from "../../App";
-import { postData } from "../../api";
+import { postData } from "../../utils/api";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -131,9 +131,20 @@ const Login = () => {
       if (res.success === true && res.token) {
         // Store in sessionStorage (clears when tab closes)
         sessionStorage.setItem("accessToken", res.token);
-        sessionStorage.setItem("adminEmail", res.admin?.email || email);
 
+        // ✅ FIXED: Store admin data as JSON object
+        const adminData = {
+          email: res.admin?.email || email,
+          name: res.admin?.name || email.split("@")[0],
+          id: res.admin?.id || res.admin?._id,
+        };
+
+        sessionStorage.setItem("adminData", JSON.stringify(adminData));
+
+        // ✅ Update context
         context.setIsLogin(true);
+        context.setAdmin(adminData);
+
         navigate("/dashboard");
       } else {
         alert(res.message || "Login failed");
@@ -197,7 +208,7 @@ const Login = () => {
             />
             <div className="relative">
               <input
-                type={showPassword ? "text" : "password"} // 👈 toggle type
+                type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 className="w-full input-metal px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 outline-none"
                 value={password}
@@ -219,9 +230,10 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full titanium-btn py-2 cursor-pointer transition-colors rounded-lg"
+              disabled={isLoading}
+              className="w-full titanium-btn py-2 cursor-pointer transition-colors rounded-lg disabled:opacity-50"
             >
-              Get Started
+              {isLoading ? "Signing in..." : "Get Started"}
             </button>
           </form>
 
